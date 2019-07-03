@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import './component'
+import './components/component'
+
 export default {
   name: 'app',
   data () {
