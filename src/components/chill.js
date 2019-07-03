@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import eventHub from './eventHub';
 
-export default Vue.component('chill', {
+const chill = {
   template: '<button @click="doit">\
                You clicked me {{ count }} times.\
             </button>',
@@ -16,4 +16,6 @@ export default Vue.component('chill', {
       eventHub.$emit('addCount', 1);
     },
   },
-})
+}
+
+export default chill;
