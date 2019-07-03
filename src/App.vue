@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import './components/component'
+import './components/button-component'
 
 export default {
   name: 'app',

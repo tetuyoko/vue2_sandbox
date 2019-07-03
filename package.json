@@ -20,6 +20,5 @@
   "alias": {
     "vue" : "./node_modules/vue/dist/vue.common.js",
     "Vue" : "./node_modules/vue/dist/vue.js"
-
   }
 }
