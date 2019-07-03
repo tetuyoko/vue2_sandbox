@@ -1,25 +1,23 @@
-import Vue from 'vue';
-import chill from './chill'
+import chill from './chill';
 import eventHub from './eventHub';
 
 const buttonComponent = {
   components: {
     chill: chill
   },
-  template: '<div>\
+  template: `<div>\
                <button @click="doit">\
                  count: {{ count }} chillCount: {{ chillCount }}.\
                </button>\
                <chill></chill>\
-             </div>',
+             </div>`,
   created() {
-    eventHub.$on('addCount', (delta) => {
+    eventHub.$on('addCount', delta => {
       this.addCount(delta);
     });
   },
   data: () => {
-    return { count: 0, chillCount: 0
-    }
+    return { count: 0, chillCount: 0 };
   },
   methods: {
     addCount(delta) {
@@ -28,8 +26,8 @@ const buttonComponent = {
     doit() {
       this.count++;
       //eventHub.$emit('addCount', 1);
-    },
-  },
-}
+    }
+  }
+};
 
 export default buttonComponent;
