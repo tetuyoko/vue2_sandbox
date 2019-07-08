@@ -12,7 +12,7 @@ const buttonComponent = {
                <chill></chill>\
              </div>`,
 
-  created() {
+  mounted() {
     this.$eventHub.$on('addCount', delta => {
       this.addCount(delta);
     });

@@ -1,6 +1,5 @@
 const chill = {
-  template:
-    '<button @click="doit">\
+  template: '<button @click="doit">\
                You clicked me {{ count }} times.\
              </button>',
 
