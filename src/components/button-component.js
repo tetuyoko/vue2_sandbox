@@ -1,15 +1,16 @@
-import chill from './chill';
+import Chill from './chill';
 
 const buttonComponent = {
   components: {
-    chill: chill
+    Chill
   },
 
   template: `<div>\
+               <h1>{{ hoge('i') }}</h1>\
                <button @click="doit">\
                  count: {{ count }} chillCount: {{ chillCount }}.\
                </button>\
-               <chill></chill>\
+               <chill placeholder="hage"></chill>\
              </div>`,
 
   mounted() {
@@ -23,6 +24,9 @@ const buttonComponent = {
   },
 
   methods: {
+    hoge(i) {
+      return 'fuga' + i;
+    },
     addCount(delta) {
       this.chillCount = this.chillCount + delta;
     },

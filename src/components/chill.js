@@ -1,11 +1,23 @@
-const chill = {
+//export const Chill = {
+export default {
   template: '<button @click="doit">\
                You clicked me {{ count }} times.\
+               placeholder is {{ placeholder }}.\
              </button>',
 
-  data: () => {
+  props: { 
+    placeholder: {
+      type: String,
+      required: true,
+    },
+  },
+
+  data() {
     return {
-      count: 0
+      count: 0,
+      funcme: e => {
+        console.log('mounted func')
+      }
     };
   },
 
@@ -14,7 +26,17 @@ const chill = {
       this.count++;
       this.$eventHub.$emit('addCount', 1);
     }
-  }
-};
+  },
 
-export default chill;
+  // mounted: () => {
+  //    this.$nextTick(() => {
+  //   });
+  // }
+  mounted() {
+    this.$nextTick(() => {
+      console.log('hoge')
+      document.addEventListener('click', this.funcme, false);
+    })
+  }
+
+};
