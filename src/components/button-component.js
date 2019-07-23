@@ -5,12 +5,12 @@ const buttonComponent = {
     Chill
   },
 
-  template: `<div>\
-               <h1>{{ hoge('i') }}</h1>\
-               <button @click="doit">\
-                 count: {{ count }} chillCount: {{ chillCount }}.\
-               </button>\
-               <chill placeholder="hage"></chill>\
+  template: `<div>
+               <h1>{{ hoge('i') }}</h1>
+               <button @click="doit">
+                 count: {{ count }} chillCount: {{ chillCount }}.
+               </button>
+               <chill idName="thisId" className="hoge" placeholder="hage"></chill>
              </div>`,
 
   mounted() {

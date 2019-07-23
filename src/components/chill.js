@@ -1,12 +1,27 @@
 //export const Chill = {
 export default {
-  template: '<button @click="doit">\
-               You clicked me {{ count }} times.\
-               placeholder is {{ placeholder }}.\
-             </button>',
+  template: `<div>
+               <button @click="doit"
+                       :id="idName"
+                       :class="className">
+                 You clicked me {{ count }} times.
+                 placeholder is {{ placeholder }}.
+               </button>
+               <input v-model="fuga"
+                      @change="changer">
+               {{ fuga }}
+             </div>`,
 
   props: { 
     placeholder: {
+      type: String,
+      required: true,
+    },
+    idName: {
+      type: String,
+      required: false,
+    },
+    className: {
       type: String,
       required: true,
     },
@@ -15,6 +30,7 @@ export default {
   data() {
     return {
       count: 0,
+      fuga: 0,
       funcme: e => {
         console.log('mounted func')
       }
@@ -22,6 +38,9 @@ export default {
   },
 
   methods: {
+    changer() {
+      console.log(`chage ${this.fuga}`)
+    },
     doit() {
       this.count++;
       this.$eventHub.$emit('addCount', 1);
