@@ -6,7 +6,7 @@ export default {
                        :id="idName"
                        :class="className">
                  You clicked me {{ count }} times.
-                 placeholder is {{ placeholder }}.
+                 placeholder is {{ placeHolder }}.
                </button>
                <input v-model="fuga"
                       @focus="onFocus"
@@ -15,49 +15,49 @@ export default {
                {{ fuga }}
              </div>`,
 
-  props: { 
+  props: {
     idx: {
       type: Object,
-      required: false,
+      required: false
     },
     required: {
       type: Boolean,
       default: false,
-      required: false,
+      required: false
     },
-    placeholder: {
+    placeHolder: {
       type: String,
-      required: true,
+      required: true
     },
     idName: {
       type: String,
-      required: false,
+      required: false
     },
     className: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
 
   data() {
     return {
       count: 0,
       fuga: 0,
-      funcme: e => {
-        console.log('mounted func')
+      funcme: () => {
+        console.log('mounted func');
       }
     };
   },
 
   methods: {
     onFocus() {
-      console.log(this.idx.hoge(1))
+      console.log(this.idx.hoge(1));
     },
     onBlur() {
-      console.log(`Blur`)
+      console.log(`Blur`);
     },
     changer() {
-      console.log(`chage ${this.fuga}`)
+      console.log(`chage ${this.fuga}`);
     },
     doit() {
       this.count++;
@@ -65,15 +65,10 @@ export default {
     }
   },
 
-  // mounted: () => {
-  //    this.$nextTick(() => {
-  //   });
-  // }
   mounted() {
     this.$nextTick(() => {
-      console.log('hoge')
+      console.log('hoge');
       document.addEventListener('click', this.funcme, false);
-    })
+    });
   }
-
 };

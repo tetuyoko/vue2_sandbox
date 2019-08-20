@@ -10,7 +10,7 @@ const buttonComponent = {
                <button @click="doit">
                  count: {{ count }} chillCount: {{ chillCount }}.
                </button>
-               <chill :idx="this" idName="thisId" required className="hoge" placeholder="hage"></chill>
+               <chill :idx="this" idName="thisId" required className="hoge" placeHolder="hage"></chill>
              </div>`,
 
   mounted() {
