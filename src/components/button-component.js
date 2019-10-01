@@ -1,8 +1,8 @@
-import Chill from './chill';
+//import Chill from './chill';
 
 const buttonComponent = {
   components: {
-    Chill
+    //Chill
   },
 
   template: `<div>
@@ -10,8 +10,8 @@ const buttonComponent = {
                <button @click="doit">
                  count: {{ count }} chillCount: {{ chillCount }}.
                </button>
-               <chill :idx="this" idName="thisId" required className="hoge" placeHolder="hage"></chill>
              </div>`,
+//<chill :idx="this" idName="thisId" required className="hoge" placeHolder="hage"></chill>
 
   mounted() {
     this.$eventHub.$on('addCount', delta => {
