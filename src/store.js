@@ -8,12 +8,14 @@ export default new Vuex.Store({
     count: 0,
     hoge: '',
   },
+
   mutations: {
     increment(state) {
       state.count++;
     },
+
     decrement(state) {
-      state.coun--;
+      state.count--;
     },
   },
 });

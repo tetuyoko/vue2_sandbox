@@ -21,6 +21,7 @@ export default {
     increment() {
       this.$store.state.count++;
     },
+
     decrement() {
       this.$store.state.count--;
     },
