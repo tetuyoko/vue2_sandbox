@@ -11,7 +11,7 @@ const buttonComponent = {
                  count: {{ count }} chillCount: {{ chillCount }}.
                </button>
              </div>`,
-//<chill :idx="this" idName="thisId" required className="hoge" placeHolder="hage"></chill>
+  //<chill :idx="this" idName="thisId" required className="hoge" placeHolder="hage"></chill>
 
   mounted() {
     this.$eventHub.$on('addCount', delta => {
@@ -33,8 +33,8 @@ const buttonComponent = {
     doit() {
       this.count++;
       //eventHub.$emit('addCount', 1);
-    }
-  }
+    },
+  },
 };
 
 export default buttonComponent;

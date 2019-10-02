@@ -18,25 +18,25 @@ export default {
   props: {
     idx: {
       type: Object,
-      required: false
+      required: false,
     },
     required: {
       type: Boolean,
       default: false,
-      required: false
+      required: false,
     },
     placeHolder: {
       type: String,
-      required: true
+      required: true,
     },
     idName: {
       type: String,
-      required: false
+      required: false,
     },
     className: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
 
   data() {
@@ -45,7 +45,7 @@ export default {
       fuga: 0,
       funcme: () => {
         console.log('mounted func');
-      }
+      },
     };
   },
 
@@ -62,7 +62,7 @@ export default {
     doit() {
       this.count++;
       this.$eventHub.$emit('addCount', 1);
-    }
+    },
   },
 
   mounted() {
@@ -70,5 +70,5 @@ export default {
       console.log('hoge');
       document.addEventListener('click', this.funcme, false);
     });
-  }
+  },
 };

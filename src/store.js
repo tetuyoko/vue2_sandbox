@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     count: 0,
-    hoge: ''
+    hoge: '',
   },
   mutations: {
     increment(state) {
@@ -14,6 +14,6 @@ export default new Vuex.Store({
     },
     decrement(state) {
       state.coun--;
-    }
-  }
+    },
+  },
 });

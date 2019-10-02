@@ -1,3 +1,5 @@
+import { mapState } from 'vuex';
+
 export default {
   // view
   template: `
@@ -12,12 +14,7 @@ export default {
   `,
   // state
   computed: {
-    count() {
-      return this.$store.state.count;
-    },
-    //hoge() {
-    //  return this.$store.state.hoge;
-    //}
+    ...mapState(['count']),
   },
   // actions
   methods: {
@@ -26,6 +23,6 @@ export default {
     },
     decrement() {
       this.$store.state.count--;
-    }
-  }
+    },
+  },
 };

@@ -13,6 +13,7 @@ module.exports = {
     'import',
   ],
   'extends': [
+    'plugin:vue/recommended',
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:prettier/recommended',
@@ -20,6 +21,11 @@ module.exports = {
   'rules': {
     'no-console': 0,
     'quotes': [2, 'single', { allowTemplateLiterals: true }],
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    "prettier/prettier": [
+      "error", {
+        "singleQuote": true,
+        "trailingComma": 'all'
+      }
+    ],
   },
 };
