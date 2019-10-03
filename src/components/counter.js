@@ -1,4 +1,4 @@
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
   // view
@@ -18,12 +18,9 @@ export default {
   },
   // actions
   methods: {
-    increment() {
-      this.$store.state.count++;
-    },
-
-    decrement() {
-      this.$store.state.count--;
-    },
+    ...mapMutations([
+      'increment',
+      'decrement',
+    ]),
   },
 };

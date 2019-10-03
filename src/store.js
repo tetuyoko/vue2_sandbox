@@ -11,11 +11,19 @@ export default new Vuex.Store({
 
   mutations: {
     increment(state) {
-      state.count++;
+      console.log(this)
+      console.trace();
+
+      //console.log(state)
+      if (state) {
+        state.count += 1;
+      }
     },
 
     decrement(state) {
-      state.count--;
+      if (state) {
+        state.count -= 1;
+      }
     },
   },
 });

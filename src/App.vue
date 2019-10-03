@@ -39,9 +39,9 @@
 </style>
 
 <script>
+import store from './store'
 import buttonComponent from './components/button-component'
 import Counter from './components/counter'
-import store from './store'
 
 export default {
   name: 'app',
